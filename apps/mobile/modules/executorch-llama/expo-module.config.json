@@ -1,0 +1,9 @@
+{
+  "platforms": ["android", "ios"],
+  "android": {
+    "modules": ["com.ailearningcompanion.executorch.ExecuTorchLlamaModule"]
+  },
+  "ios": {
+    "modules": ["ExecuTorchLlamaModule"]
+  }
+}

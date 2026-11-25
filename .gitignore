@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Expo & React Native
+.expo/
+apps/mobile/android/.gradle/
+apps/mobile/android/build/
+apps/mobile/android/app/build/
+apps/mobile/android/local.properties
+apps/mobile/ios/Pods/
+apps/mobile/ios/build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Model weights & large binary artifacts (keep outside source repo)
+*.pte
+*.gguf
+*.onnx
+*.safetensors
+*.bin
+*.pth
+ai/weights/
+ai/exports/
+*.wasm
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local

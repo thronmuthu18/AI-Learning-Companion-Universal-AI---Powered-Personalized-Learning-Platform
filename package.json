@@ -1,0 +1,37 @@
+{
+  "name": "ai-learning-companion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline-first AI-powered personalised learning ecosystem using local Meta Llama inference on Web (WebLLM), Android (ExecuTorch), and iOS (ExecuTorch).",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "lint": "node scripts/lint-monorepo.mjs",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify": "npm run lint && npm run typecheck && npm test && npm run web:build",
+    "web:dev": "npm --workspace=@alc/web run dev",
+    "web:build": "npm --workspace=@alc/web run build",
+    "web:preview": "npm --workspace=@alc/web run preview",
+    "mobile:start": "npm --workspace=@alc/mobile run start",
+    "mobile:android": "npm --workspace=@alc/mobile run android",
+    "mobile:ios": "npm --workspace=@alc/mobile run ios"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "fake-indexeddb": "^6.2.8",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  },
+  "overrides": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}

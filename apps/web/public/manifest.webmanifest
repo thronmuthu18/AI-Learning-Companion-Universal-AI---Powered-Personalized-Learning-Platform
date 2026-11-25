@@ -1,0 +1,17 @@
+{
+  "name": "AI Learning Companion",
+  "short_name": "AI Companion",
+  "description": "Offline-first personalised learning ecosystem powered by local Llama 3.2 WebLLM inference.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080D1A",
+  "theme_color": "#080D1A",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

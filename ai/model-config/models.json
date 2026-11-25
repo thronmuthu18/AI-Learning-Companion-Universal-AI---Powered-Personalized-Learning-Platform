@@ -1,0 +1,73 @@
+{
+  "models": [
+    {
+      "id": "llama-3.2-1b-instruct-xnnpack-q4",
+      "modelId": "meta-llama/Llama-3.2-1B-Instruct",
+      "displayName": "Llama 3.2 1B Instruct (ExecuTorch 8da4w XNNPACK)",
+      "family": "llama-3.2",
+      "parameterSize": "1B",
+      "quantization": "8da4w (4-bit groupwise weights, 8-bit dynamic activations)",
+      "platforms": ["android", "ios"],
+      "backend": "xnnpack",
+      "contextLength": 2048,
+      "minRamMb": 2048,
+      "estimatedStorageMb": 780,
+      "licenseName": "Meta Llama 3.2 Community License",
+      "licenseUrl": "https://www.llama.com/llama3_2/license/",
+      "gated": true,
+      "exportRecipe": "optimum-cli export executorch --model meta-llama/Llama-3.2-1B-Instruct --task text-generation --recipe xnnpack --use_custom_sdpa --use_custom_kv_cache",
+      "isDefault": true
+    },
+    {
+      "id": "Llama-3.2-1B-Instruct-q4f16_1-MLC",
+      "modelId": "Llama-3.2-1B-Instruct-q4f16_1-MLC",
+      "displayName": "Llama 3.2 1B Instruct (WebGPU q4f16_1)",
+      "family": "llama-3.2",
+      "parameterSize": "1B",
+      "quantization": "q4f16_1 (4-bit weights, float16 activations)",
+      "platforms": ["web"],
+      "backend": "webgpu",
+      "contextLength": 4096,
+      "minRamMb": 2048,
+      "estimatedStorageMb": 879,
+      "licenseName": "Meta Llama 3.2 Community License",
+      "licenseUrl": "https://www.llama.com/llama3_2/license/",
+      "gated": false,
+      "isDefault": true
+    },
+    {
+      "id": "Llama-3.2-1B-Instruct-q4f32_1-MLC",
+      "modelId": "Llama-3.2-1B-Instruct-q4f32_1-MLC",
+      "displayName": "Llama 3.2 1B Instruct (WebGPU q4f32_1 Fallback)",
+      "family": "llama-3.2",
+      "parameterSize": "1B",
+      "quantization": "q4f32_1 (4-bit weights, float32 activations for GPUs without shader-f16)",
+      "platforms": ["web"],
+      "backend": "webgpu",
+      "contextLength": 4096,
+      "minRamMb": 2560,
+      "estimatedStorageMb": 1120,
+      "licenseName": "Meta Llama 3.2 Community License",
+      "licenseUrl": "https://www.llama.com/llama3_2/license/",
+      "gated": false,
+      "isDefault": false
+    },
+    {
+      "id": "Llama-3.2-3B-Instruct-q4f16_1-MLC",
+      "modelId": "Llama-3.2-3B-Instruct-q4f16_1-MLC",
+      "displayName": "Llama 3.2 3B Instruct (High-RAM WebGPU q4f16_1)",
+      "family": "llama-3.2",
+      "parameterSize": "3B",
+      "quantization": "q4f16_1",
+      "platforms": ["web"],
+      "backend": "webgpu",
+      "contextLength": 4096,
+      "minRamMb": 4096,
+      "estimatedStorageMb": 2263,
+      "licenseName": "Meta Llama 3.2 Community License",
+      "licenseUrl": "https://www.llama.com/llama3_2/license/",
+      "gated": false,
+      "isDefault": false
+    }
+  ]
+}
